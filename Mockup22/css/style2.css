@@ -1,0 +1,14 @@
+@media screen and (max-width: 1188px) {
+  body {
+    background-color: lightblue;
+  }
+  #main .nav ul {
+    visibility: hidden;
+  }
+  .text {
+    left: 5%;
+  }
+  .secondContent {
+    flex-direction: column;
+  }
+}
