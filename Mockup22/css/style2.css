@@ -2,13 +2,22 @@
   body {
     background-color: lightblue;
   }
-  #main .nav ul {
-    visibility: hidden;
+  #main .nav {
+    /* visibility: hidden; */
+    display: none;
   }
-  .text {
-    left: 5%;
-  }
+
   .secondContent {
     flex-direction: column;
+  }
+  .searchMain {
+    display: grid;
+    grid-template-columns: none;
+    grid-auto-flow: row;
+  }
+}
+@media screen and (max-width: 1428px) {
+  .text {
+    width: 350px;
   }
 }

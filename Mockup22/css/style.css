@@ -12,9 +12,10 @@ body {
 }
 
 #main {
-  display: flex;
+  /* display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: center; */
+  /* display: grid; */
   padding: 5px 0;
   background-color: #eb1c24;
   box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.4);
@@ -22,11 +23,18 @@ body {
   top: 0;
   z-index: 200;
 }
+#main nav {
+  width: 74%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 15% 85%;
+}
+
 #main img {
-  width: 20%;
-  min-width: 63px;
-  margin: 3px 0 0 0;
-  height: 63.93px;
+  width: 9.9%;
+  min-width: 50px;
+  margin: 2px 0;
+  height: 50.93px;
   filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.39));
 }
 .text {
@@ -38,7 +46,7 @@ body {
 }
 .text p {
   font-weight: 500;
-  font-size: 17px;
+  font-size: 1rem;
   padding-left: 10px;
   color: #fff;
 }
@@ -47,14 +55,15 @@ body {
   flex-direction: row;
   position: relative;
   left: 4%;
+  justify-content: end;
 }
 #main .nav ul li {
   position: relative;
   top: 1px;
-  margin: 20px 13px;
+  margin: 10px 13px;
 }
 #main .nav ul li a {
-  font-size: 15.2px;
+  font-size: clamp(0.5rem, 1vw, 2rem);
   color: #fff;
 }
 #main .nav ul li a:not(.a)::after {
@@ -92,9 +101,12 @@ body {
   font-size: 12px;
   margin: 0 6px 3px 6px;
 }
+
+/*************----Second Banner--------------***********/
+
 #second {
   background-color: #f4343c;
-  padding: 70px 0;
+  padding: 30px 0;
 }
 
 .secondContent {
@@ -106,7 +118,7 @@ body {
   flex-basis: 80%;
 }
 .secondContent .left h2 {
-  font-size: 1.9rem;
+  font-size: 1.7rem;
   line-height: 55px;
   font-weight: 900;
 }
@@ -116,7 +128,7 @@ body {
   font-size: 700;
 }
 .secondContent .left p {
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-size: 200;
   line-height: 30px;
 }
@@ -126,44 +138,45 @@ body {
 }
 .secondContent .right img {
   width: 100%;
-  min-width: 600px;
+  min-width: 290px;
+  max-width: 80%;
   position: relative;
   top: 27%;
   left: 0%;
   box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.09);
 }
+
+/*-------------Search Bar---------------*/
 #search {
   background: #fdfdfd;
   box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.29);
   padding: 13px 0;
 }
 .searchMain {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 78%;
+  margin: 0 auto;
 }
-.searchMain .searchLeft {
-  margin-left: 25px;
-}
+
 .searchMain .searchLeft p {
   color: #787878;
   font-weight: 700;
   font-size: 1.25rem;
   position: relative;
-  right: 25%;
 }
 .searchMain .searchRight {
   background-color: #f1f1f1;
   padding: 10px 65px 9px;
-  position: relative;
-  left: 2.2%;
+  justify-self: end;
+  width: 80%;
 }
 .searchMain .searchRight input {
   background-color: transparent;
   outline: 0;
   border: 0;
   color: #787878cc;
-  font-size: 15px;
+  font-size: clamp(0.6rem, 1vw, 1rem);
   position: relative;
   right: 5%;
 }
