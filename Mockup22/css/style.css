@@ -151,10 +151,11 @@ body {
   background: #fdfdfd;
   box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.29);
   padding: 13px 0;
+  position: relative;
 }
 .searchMain {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   width: 78%;
   margin: 0 auto;
 }
@@ -163,7 +164,6 @@ body {
   color: #787878;
   font-weight: 700;
   font-size: 1.25rem;
-  position: relative;
 }
 .searchMain .searchRight {
   background-color: #f1f1f1;
@@ -187,27 +187,29 @@ body {
   top: 2%;
   transform: rotate(2deg);
 }
+/*--------THIRD PART- -------------*/
 #third {
   margin-bottom: 20%;
 }
 #third .top {
-  display: flex;
-  justify-content: center;
-  margin: 4% 0 0 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 78%;
+  margin: 4% auto;
 }
-/* #third .top > img {
+/* #third .top > div {
   border: 2px solid #000;
 } */
-#third .top img {
-  width: 39%;
+#third .top .img img {
+  width: 100%;
   height: 13vh;
   object-fit: fill;
 }
-#third .top img:nth-child(1) {
-  padding-right: 8px;
+#third .top .img:nth-child(1) {
+  /* padding-right: 8px; */
 }
-#third .top img:nth-child(2) {
-  padding-left: 9px;
+#third .top .img:nth-child(2) {
+  margin-left: 9px;
 }
 .downContainer {
   width: 77.3%;
@@ -255,7 +257,7 @@ body {
 .downleft .event h2 {
   color: #ed5157;
   font-weight: 900;
-  font-size: 1.9rem;
+  font-size: 1.5rem;
   text-align: center;
 }
 .downleft .event h2::before {
@@ -289,7 +291,7 @@ body {
 }
 .eventGrid .eventRight h3 {
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 20px;
 }
 .eventGrid .eventRight small {
@@ -421,10 +423,19 @@ body {
 }
 .bottomCal .calendar ul > li {
   border: 1px solid #e3e3e3;
-  padding: 43px 32px;
   text-align: center;
-  color: #999898;
-  font-size: 25px;
+  color: #6a6a6a;
+  font-size: 30px;
+}
+.bottomCal .calendar ul li span {
+  font-size: clamp(0.3rem, 0.7vw, 0.7rem);
+  text-align: start;
+  color: #8d8d8d;
+}
+.bottomCal .calendar ul li p {
+  font-size: clamp(0.3rem, 0.5vw, 0.7rem);
+  text-align: right;
+  margin: 0 10px 5px 0;
 }
 .bottomCal .calendar ul > li:hover {
   background-color: #0f4291;
@@ -452,6 +463,7 @@ body {
   background-color: #479a08;
   color: #fff;
 }
+
 #fourth {
   margin: 50px auto 10%;
   width: 80%;
@@ -602,6 +614,7 @@ body {
   padding: 10px 0;
   color: #da5257;
 }
+/*-------------FIFITH BANNER---------------------*/
 #fifth {
   width: 78%;
   margin: 0 auto;
@@ -610,9 +623,16 @@ body {
   text-align: center;
   margin-bottom: 5%;
 }
+#fifth .imgFifth img {
+  width: 80%;
+  min-width: 400px;
+  min-height: 120px;
+  object-fit: cover;
+}
 .fifthGrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* grid-template-columns: repeat(4, 1fr); */
   gap: 0.5em;
   text-align: center;
   margin-bottom: 12%;
