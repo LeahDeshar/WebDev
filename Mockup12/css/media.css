@@ -1,0 +1,44 @@
+@media only screen and (max-width: 90em) {
+  .menuGrid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (auto)[1];
+        grid-template-columns: repeat(1, auto);
+        grid-template-areas: 'aside aside' 'bside bside';
+    width: 70%;
+    margin: auto;
+  }
+  .menuGrid .bSide {
+    margin-top: 19%;
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: bside;
+  }
+  .menuGrid .aSide {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: aside;
+  }
+  .menuGrid p {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 70em) {
+  nav ul li {
+    display: none;
+  }
+  nav .fa {
+    display: block;
+    color: #fff;
+    position: absolute;
+    right: 120px;
+  }
+  .bSide {
+    margin-top: 95%;
+    border: 2px solid brown;
+  }
+}
+/*# sourceMappingURL=media.css.map */

@@ -1,0 +1,56 @@
+
+$widthLen: 85%;
+$textColor: #fff;
+$backColor: #bc1f2e;
+$tempColor: blue;
+$radius: 30px;
+@media only screen and (max-width: 90em)
+ {
+    
+    .menuGrid
+    {
+        display: grid;
+        grid-template-columns: repeat(1,auto);
+        grid-template-areas: 
+        'aside aside'
+        'bside bside';
+        width: 70%;
+        margin: auto;
+        .bSide
+        {
+            margin-top: 19%;
+            grid-area: bside;
+        }
+        .aSide
+        {
+            grid-area: aside;
+        }
+        p
+        {
+            width: 80%;
+        }
+    }
+  }
+  @media only screen and (max-width: 70em)
+  {
+     
+      nav 
+        {
+            ul li 
+            {
+                display: none;
+            }
+          .fa
+            {
+                display: block;
+                color: #fff;
+                position: absolute;
+                right: 120px;
+            }
+        }
+        .bSide
+        {
+            margin-top: 95%;
+            border: 2px solid brown;
+        }
+  }
