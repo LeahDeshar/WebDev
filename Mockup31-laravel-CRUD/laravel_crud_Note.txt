@@ -1,0 +1,39 @@
+
+
+>STEP_1
+  -->install the laravel
+  -->create anyfile.blade.php file inside resources>views>yourFile.blade.php then
+     go to the routes>web.php then create routes
+  -->
+  -->
+  -->
+  -->
+  -->
+  -->
+  -->
+  -->
+  -->
+  -->
+  -->
+  -->
+  -->
+  -->
+  -->
+  -->
+  -->
+  -->
+  -->
+  -->
+  -->
+  -->
+  -->
+  -->
+  -->
+  -->
+  -->
+  -->
+  -->
+  -->
+  -->
+  -->
+  -->

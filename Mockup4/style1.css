@@ -1,0 +1,137 @@
+    *
+    {
+        margin: 0;
+        padding: 0;
+        font-family: 'Open Sans', sans-serif;
+    }
+    body
+    {
+        background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/background.png);
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        min-height: 100vh;
+        position: relative;
+      
+    }
+    .container
+    {
+        display: flex;
+        justify-content: space-around;
+        margin: 0 50px;
+        padding: 20px;
+    }
+    .container img
+    {
+        width: 28px;
+        height: 35px;
+       position: relative;
+    }
+    .social-media a
+    {
+        text-decoration: none;
+        color: #fff;
+        margin: 0 25px;
+    }
+    .social-media
+    {
+        transform: rotate(90deg) translate(-100%);
+        transform-origin: left;
+        position: absolute;
+        bottom: 0;
+        left: 5%;
+    }
+    .sidebar
+    {
+        flex: 1;
+        text-align: right;
+    }
+    ul li ,.sidebar .fa
+    {
+        display: inline-block;
+        list-style: none;
+        margin-right: 60px;
+        padding: 10px;
+
+    }
+    li a 
+    {
+        text-decoration: none;
+        color: #fff;
+        font-size: 18px;
+    }
+    .line
+    {
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        width: 2px;
+        left: 9%;
+        background: rgba(255,255,255,.3);
+    }
+    .sidebar .fa, h3 .fa
+    {
+        font-size: 30px;
+        color: #fff;
+    }
+    h3 .fa
+    {
+        padding-right: 10px;
+    }
+    h3, h1, p
+    {
+        color: #fff;
+    }
+    .content
+    {
+        margin: 10% 2% 2% 14%;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    h1
+    {
+        font-size: 80px;
+        margin: 20px 0 ;
+    }
+    .content-left
+    {
+        flex: 1;
+    }
+    .content-right
+    {
+        flex: 1;
+        display: inline-block;
+        position: absolute;
+        left: 75%;
+        top: 40%;
+    }
+    hr
+    {
+        height: 120px;
+        color: #fff;
+        position: relative;
+        right: 28%;
+        top: 65px;
+    }
+    
+    .content-right p
+    {
+        font-size: 20px;
+        padding: 10px;
+    }
+    p .fa
+    {
+        padding-right: 10px;
+    }
+    .footer
+    {
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer img
+    {
+        height: 60px;
+        width: 60px;
+        margin: 3% 14% 0 14%;
+    }

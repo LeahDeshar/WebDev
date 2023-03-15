@@ -1,0 +1,125 @@
+laravel and react js
+  >STEP_1 ---backend
+	-->install laravel
+
+	-->init by using cmd-> php artisan serve
+
+	   server is running now 
+
+	-->create a db
+
+	--> go to .env file and set the database and password accordingly
+
+	-->Go to database>seeders>DatabaseSeeder.php and uncomment the first line inside run()
+	-----------------------------------------------------------------
+	 ---WHAT DO YOU MEAN BY SEED?
+	-----------------------------------------------------------------
+	--> In the context of databases, "seeding" refers to the process of
+   	 inserting default or fake data into a database table. This is often 
+   	 used for development and testing purposes, as it allows developers 
+
+    	to have a set of known data to work with, rather than starting with an empty database.
+    	The data that is inserted is called "seed data", and it can be created in a variety of ways. 
+
+    	In Laravel, the "db:seed" command can be used to run seeders, which are classes that define 
+    	the seed data and insert it into the database. The "DatabaseSeeder.php" file that I mentioned 
+
+    	earlier is a special seeder that is used to call other seed classes and run them.
+
+	-----------------------------------------------------------------
+	    code in database>seeder>databaseSeeder.php>run()
+	 ---\App\Models\User::factory(10)->create();
+	 -->The code you've provided is an example of how to use the "factory" method provided by the Laravel 
+            framework to create fake data for the "users" table in the database. 
+
+            The first line is using the "factory" method to create 10 new fake user records
+             and insert them into the "users" table. 
+	-----------------------------------------------------------------
+
+
+	-->to invoke the run() ..do this cmd ->php artisan migrate:fresh --seed 
+
+	-->WHAT THIS COMMAND MEANS??
+	-----------------------------------------------------------------
+	-->migrate:fresh: This command will first drop all the tables and then re-run all the migrations 
+	   again to create the tables with a fresh new schema. This is useful when you have
+ 	   made changes to your migrations and want to apply them to the database.
+
+	   --seed: The --seed flag tells Laravel to run the seeders after the migrations have 
+	   been run. This means that after all the tables have been created, the seed data defined in the
+ 	   seed classes will be inserted into the appropriate tables.
+
+	   So overall the command php artisan migrate:fresh --seed will drop all the tables of the database, 
+	   create them again with the new schema and then insert the seed data into the
+ 	   appropriate tables. This is useful for quickly resetting the database to 
+	   a known state for development or testing purposes.
+
+
+  >STEP_2 --Frontend
+          -->install the react in the directory folder
+  
+  >STEP_3 --API
+          -->https://reactjs.org/docs/faq-ajax.html go to this page and copy the component class at first
+
+	  --> 1)import React from "react"; 2) export default Users; 3)import the User in App.js then add <Users/> component
+	  --> fetching task is not complete yet -->in the Users.jsx in fetch() paste this "http://localhost:8000/api/users"
+	  --> directing to the php laravel server and then go to
+	  --> backend>routes>api.php to define the router of the users which will also have function that will return the data
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	  --> Route::get('/users', function () {
+	       $users = User::get();
+               return response()->json($users);
+	      });
+	  --> EXPLANATION
+		->This is an example of a route definition in Laravel, which is 
+		->used to handle incoming HTTP requests. The Route::get() method 
+		->is used to define a route that will handle a GET request made 
+		->to the specified URL path '/users'.When a GET request is made to the 
+		->'/users' path, the anonymous function provided as the second argument 
+		->will be executed. This function retrieves all the records from the "users"
+		-> table using the User::get() method and returns them in JSON format using
+		-> the response()->json() method.The User class is a model class in Laravel, 
+		->which represents a database table and provides methods for interacting with 
+		->the table's data. In this case, the get() method is used to retrieve all the 
+		->records from the "users" table.The response()->json() method returns a JSON 
+		->response to the client with the data provided as the argument, in this case, 
+		->the $users variable that contains all the records from the "users" table.This
+		->route definition is a simple example of how to retrieve data from the database 
+		->and return it to the client in JSON format, it's a basic CRUD operation "Read" operation.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	  -->  go to Users.jsx then replace all the items-> users then there is item: result.items
+		replace item->users then remove  .items from result
+	  --> if you change anything under the laravel>config use this cmd ->php artisan optimize
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

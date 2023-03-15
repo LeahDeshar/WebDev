@@ -39,22 +39,45 @@
 // const result = arithmeticTriplets(nums, target);
 // console.log(result);
 
-let isPalindrome = function (x) {
-  const str = x.toString().;
-  let sum = 0;
-  let m;
-  for (let i = x.length - 1; i > 0; i--) {}
-  // while (x != 0) {
-  //   m = parseInt(x % 10);
-  //   console.log(m);
-  //   sum = sum * 10 + m;
-  //   x = parseInt(x / 10);
-  // }
-  console.log(sum);
-  if (temp == sum) {
-    return true;
+// let isPalindrome = function (x) {
+//   const str = x.toString().split("").reverse().join("");
+//   const temp = x;
+
+//   if (temp == str) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// };
+// console.log(isPalindrome(-121));
+
+// Given an input string s and a pattern p, implement regular expression matching with support for '.' and '*' where:
+
+// '.' Matches any single character.​​​​
+// '*' Matches zero or more of the preceding element.
+// The matching should cover the entire input string (not partial).
+
+// const s = "aa",
+//   p = "a";
+
+const str = "  This is my cat  ";
+const res = str.trim().split("");
+let count = 0;
+const length = res.length;
+for (let i = length - 1; i >= 0; i--) {
+  if (res[i] == "") {
+    count++;
+  }
+}
+// console.log(count);
+var lengthOfLastWord = function (s) {
+  var sArr = s.trim().split(" ");
+  if (sArr.length === 0) {
+    return 0;
   } else {
-    return false;
+    return sArr[sArr.length - 1].length;
   }
 };
-console.log(isPalindrome(-121));
+console.log(lengthOfLastWord("   fly me   to   the moon  "));
+
+const arr = ["a"];

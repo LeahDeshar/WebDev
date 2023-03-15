@@ -1,0 +1,66 @@
+ >Click and redirect to another page:
+   >>create button  with path to redirect it
+     <button type="button" class="btn btn-primary mt-3"><a href="/next" class="nav-link">Learn More</a></button>
+
+   >>In web.php define the path ..you can also do this with Controller
+     Route::get('/next', function () {return view('operation');});
+
+
+
+***************************************    READ OPERATION     *********************************************
+
+
+   >>uncomment seed
+     php artisan migrate:fresh --seed
+     create and migrate the seed for read operation 
+     
+   >>in web.php give the route 
+     --when you have /next as route ,read() in 
+       BodyController class will be executed
+       Route::get('/next', [BodyController::class,'read']);
+
+     --In BodyController.php include the User class Models
+
+       --to access the seed data ..use the User model in the BodyController
+
+       --use App\Models\User;
+
+       --then define the function read() which is called for /next route 
+         --it will get and put in the $category 
+         --then return view operation.php along with the category variable
+         --which will be used in the operation.php to fetch the data
+
+            public function read()
+            {
+              $category = User::get();
+                return view('operation', ['category' => $category]);
+            
+            }
+
+ ***************************************    CREATE OPERATION  *********************************************
+     
+     >> create the form with post method and add @csrf token
+        make sure your input have the name attribute
+
+     >>form's action attribute will have the route path to the /store which
+        will store the created rows
+
+     >>create route of /store in web.php
+        public function store(Request $request)
+        {
+            >>create a object of User model class 
+              $category = new User;
+
+            >>then pass the object with the name,email,password that
+              is created by the user 
+              $category->name = $request->name;
+              $category->email = $request->email;
+              $category->password = $request->password;
+
+            >>save the data
+              $category->save();
+
+            >>Then redirect to the page
+              return redirect('/same');
+              }
+    

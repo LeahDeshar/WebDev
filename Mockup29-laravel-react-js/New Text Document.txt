@@ -1,0 +1,31 @@
+
+
+    > Step 1--Frontend
+          --> install react
+          --> npm install bootstrap or mui
+          --> install react-router-dom to route
+          --> import and add all the required components 
+    > Step 2--API -axios
+          --> npm install axios
+          --> create base file for axios ==http.jsx then import axios
+          --> It will include following:
+
+          -->export default axios.create({
+            baseURL: "http://localhost:8000/api",
+            headers:{
+                "Content-type":"application/json"
+            }
+          })
+          -------------------------------------------------------------------------------------------------------
+          -->EXPLANATION
+          -->The axios.create() method in the code you provided is used to create a new instance of the Axios client with a set of default configurations.
+
+        -->baseURL: This option sets the base URL for all the subsequent requests. This means that all the requests made using this instance of the Axios client will be prepended with the specified base URL. For example, if you make a request to '/users', it will actually hit the endpoint 'http://localhost:8000/api/users'
+
+        -->headers: This option sets the default headers for all the subsequent requests. This means that all the requests made using this instance of the Axios client will have the specified headers included in the request. In this example, the header Content-type: application/json will be included in all requests.
+
+        -->overall,It looks like this client is configured to communicate with an API endpoint running on localhost at port 8000. The Content-type: application/json header indicates that this client is expecting JSON data in the response and will also send JSON data in the requests. 
+        -------------------------------------------------------------------------------------------------------
+        
+        -->we can fetch data through axios which calls the Api in the http.jsx 
+           It should be included in the file which fetches the data
