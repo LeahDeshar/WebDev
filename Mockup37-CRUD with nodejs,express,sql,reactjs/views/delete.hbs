@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form action="/remove">
+            <h3>DELETE STUDENT</h3>
+            <hr>
+            <label for="phone">Phone no</label>
+            <input type="text" placeholder="Enter contact number to be searched" name="phone" id="phone" required>
+
+             <button type="submit" class="registerbtn">DELETE STUDENT</button>
+
+            <a href="./" class="linktogoback">Back To Home Page</a>
+            <br> 
+            {{#if mesg1}}
+            <h2>DATA DELETED!</h2>
+            {{/if}}
+
+            {{#if mesg2}}
+            <h2>Data Not Found!</h2>
+            {{/if}}
+        </form>
+    </div>
+</body>
+</html>

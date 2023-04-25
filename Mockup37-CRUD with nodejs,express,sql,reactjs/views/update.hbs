@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="">
+        <form action="/updatesearch">
+            <h3>UPDATE STUDENT</h3>
+            <hr>
+
+           
+            <label for="phone"><strong>Phone no</strong></label>
+            <input type="text" class="phoneUpdate" style="width: 300px;" placeholder="Enter contact number to be searched" name="phone" id="phone" required>
+
+             <button type="submit" class="registerbtn">UPDATE STUDENT</button>
+
+            <a href="./" class="linktogoback">Back To Home Page</a>
+            <br> 
+            {{#if umesg}}
+            <h2>Data Updated!</h2>
+            {{/if}}
+            {{#if mesg2}}
+            <h2>Data Not Found!</h2>
+            {{/if}}
+        </form>
+    </div>
+            {{#if mesg1}}
+              <div class="container">
+        <form action="/updatestudent" >
+            <h3>UPDATE STUDENT</h3>
+            <hr>
+             {{#data}}
+            <label for="name"><b>Student Name</b></label>
+            <input type="text" placeholder="Enter Name" name="name" id="name" value="{{username}}" required>
+
+            <label for="phone"><b>Contact Number</b></label>
+            <input type="phone" placeholder="Enter Phone Number" name="phone" id="phone" value="{{phoneno}}" required>
+
+             <label for="email"><b>Email Id</b></label>
+            <input type="email" placeholder="Enter email id" name="email" id="email" 
+            value="{{emailid}}" required>
+            <strong>Gender</strong><br>
+            <div class="gender">
+               
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="male" value="Male">
+                <label for="female">Female</label>
+
+                <input type="radio" name="gender" id="female" value="Female">
+            </div>
+            <button type="submit" class="registerbtn">UPDATE STUDENT</button>
+{{/data}}
+            <a href="./" class="linktogoback">Back To Home Page</a>
+         
+         
+             
+        </form>
+    </div>
+            {{/if}}
+</body>
+</html>
